@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate.ejs') %>
+    <div class="card m-4">
+        <div class="card-header">
+            The details show.
+        </div>
+        <div class="card-body">
+            <div class="m-3">
+                <p class="fs-6 opacity-25 card-title">ID: <%= comment.id %>
+                </p>
+                <p class="fs-2 card-title">
+                    <%= comment.username %>
+                </p>
+                <p class="fs-5 card-text">
+                    <%= comment.comment %>
+                </p>
+            </div>
+            <form class='m-3' action="/<%= comment.id %>/edit">
+                <button class="btn btn-primary">Edit</button>
+            </form>
+            <form class='m-3' action="/<%= comment.id %>?_method=delete" method="post">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+
+    </div>

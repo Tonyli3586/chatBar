@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate.ejs') %> 
+
+    <div class="card position-relative top-50 start-50 translate-middle mb-3" style="width: 60rem;">
+        <div class="card-header fs-5">
+        let's chat!
+        </div>
+        <ul class="list-group list-group-flush">
+            <% for (let c of comments) {%>
+                <li class="list-group-item">
+                    <b><p class="fs-6"><%= c.username %></p></b>
+                    <p class="fs-6"><%= c.comment %></p> 
+                    <a class=" btn btn-warning" href="/<%= c.id %> ">details</a> 
+                </li>
+            <%} %> 
+        </ul>
+    </div>
+
